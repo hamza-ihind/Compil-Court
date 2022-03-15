@@ -1,9 +1,11 @@
 #home {
-  .ibnzohr {
-    width: 15%;
-    margin-bottom: 20px;
-  }
-
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("images/picture.jpg");
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -12,6 +14,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  .ibnzohr {
+    width: 15%;
+    margin-bottom: 20px;
+  }
 
   & h2 {
     color: white;
@@ -32,4 +39,46 @@
   }
 
   // button animation
+
+  .btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 60px;
+    line-height: 50px;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+    border: 2px solid white;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    transition: all 0.35s;
+  }
+
+  .btn1 span {
+    position: relative;
+    z-index: 2;
+  }
+
+  .btn1:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #bc2c2c;
+    transition: all 0.35s;
+  }
+
+  .btn1:hover {
+    color: #fff;
+  }
+
+  .btn1:hover:after {
+    width: 100%;
+  }
 }

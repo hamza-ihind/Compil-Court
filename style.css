@@ -14,54 +14,73 @@ h1 {
   font-weight: 700;
   color: #232355; }
 
-span {
-  font-size: 0.9rem;
-  color: aqua; }
-
 h6 {
   font-size: 1.1rem;
   color: #181831; }
 
-.bg-img {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("images/picture.jpg");
-  width: 100%;
-  height: 100vh;
-  position: relative; }
-
 .ENSA {
-  width: 10%;
+  width: 8%;
   cursor: pointer; }
 
-.container {
+header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  transition: background-color 0.5s ease;
   padding: 1vw 8vw;
   align-items: center;
   background-color: transparent;
   overflow: hidden;
-  position: absolute; }
-  .container .navigation ul {
+  z-index: 1000;
+  position: fixed; }
+  header .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  header .navigation ul {
     display: flex;
     justify-content: flex-end;
     align-items: center; }
-    .container .navigation ul li {
+    header .navigation ul li {
       list-style: none;
       margin-left: 30px; }
-      .container .navigation ul li a {
+      header .navigation ul li a {
         text-decoration: none;
         color: white;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 500;
         transition: 0.3s ease; }
-        .container .navigation ul li a:hover {
-          color: aqua; }
+      header .navigation ul li .nav-link {
+        margin: 0 2rem;
+        position: relative; }
+      header .navigation ul li .nav-link::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease; }
+      header .navigation ul li .nav-link:hover::after {
+        transform: scaleX(1); }
 
 .scrolling-active {
-  background-color: white;
+  background-color: #2e2e2e;
   box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1); }
 
+.hamza {
+  margin-top: 100px; }
+
 #home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("images/picture.jpg");
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -87,3 +106,35 @@ h6 {
     line-height: 50px;
     text-align: center;
     margin-bottom: 20px; }
+  #home .btn1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 60px;
+    line-height: 50px;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 400;
+    color: white;
+    border: 2px solid white;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    transition: all 0.35s; }
+  #home .btn1 span {
+    position: relative;
+    z-index: 2; }
+  #home .btn1:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #bc2c2c;
+    transition: all 0.35s; }
+  #home .btn1:hover {
+    color: #fff; }
+  #home .btn1:hover:after {
+    width: 100%; }
